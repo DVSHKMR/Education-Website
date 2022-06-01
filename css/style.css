@@ -165,7 +165,7 @@ margin-bottom: 5rem;
     height: 100%;
 }
 
-.header_left p {
+.header__left p {
     margin: 1rem 0 2.4rem;
 }
 
@@ -409,5 +409,240 @@ footer ul li a:hover {
     margin-top: 4rem;
     padding: 1.2rem 0;
     border-top: 1px solid var(--color-bg2);
+
+}
+
+
+/* ===============MEDIA QUERIES (TABLETS)========== */
+
+
+
+@media screen and (max-width: 1024px) {
+   .container {
+       width: var(--container-width-md)
+   }
+h1 {
+    font-size: 2.2rem;
+}
+
+h2 {
+    font-size: 1.7rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+h4 {
+    font-size: 1.2;
+}
+
+
+/* =====================NAVBAR=============== */
+
+nav button {
+    display: inline-block;
+    background: transparent;
+    font-size: 1.8rem;
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+nav button#close-menu-btn {
+    display: none;
+}
+.nav__menu {
+    position: fixed;
+    top: 5rem;
+    right: 5%;
+    height: fit-content;
+    width: 18rem;
+    flex-direction: column;
+    gap: 0;
+    display: none;
+
+}
+
+.nav__menu li {
+    width: 100%;
+    height: 5.8rem;
+    animation:animateNavItems 400ms linear forwards;
+    transform-origin: top right;
+   opacity: 0; 
+}
+
+.nav__menu li:nth-child(2) {
+    animation-delay: 200ms;
+}
+.nav__menu li:nth-child(3) {
+    animation-delay: 400ms;
+}
+.nav__menu li:nth-child(4) {
+    animation-delay: 600ms;
+}
+
+@keyframes animateNavItems {
+0% {
+transform: rotatez(-90deg) rotateX(90deg) scale(0.1);
+}
+100% {
+transform: rotatez(0) rotateX(0) scale(1);;
+opacity: 1;
+}
+}
+.nav__menu li a {
+    background: var(--color-primary);
+    box-shadow: -4rem 6rem 10rem rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.nav__menu li a:hover {
+    background: var(--color-bg2);
+    color: var(--color-white);
+}
+
+/* ================HEADER============== 
+isko dekhna hai ek bar */
+
+header {
+    height: 52vh;
+    margin-bottom: 4rem;
+}
+
+.header__container {
+    gap: 0;
+    padding-bottom: 3rem;
+}
+
+
+
+/* ========================CATEGORIES============== */
+.categories {
+    height: auto;
+}
+
+.categories__container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+.categories__left {
+    margin-right: 0;
+}
+
+
+
+/* =======================POPULAR================ */
+
+
+.courses {
+    margin-top: 0;
+}
+
+.courses__container {
+    grid-template-columns: 1fr 1fr;
+}
+
+
+/* ====================FAQs================= */
+
+.faqs__container {
+    grid-template-columns: 1fr;
+}
+.faq {
+    padding: 1.5rem;
+}
+
+/* ====================FOOTER================= */
+
+
+.footer__container {
+    grid-template-columns: 1fr 1fr;
+}
+
+}
+
+
+/* ====================MEDIA QUERIES (PHONES)============================= */
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: var(--container-width-sm)
+    }
+/* =================NAVBAR=============== */
+.nav__menu {
+    right: 3%;
+}
+
+
+/* ====================HEADER=============== */
+
+header {
+    height: 100vh;
+}
+
+.header__container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    margin-top: 0;
+}
+
+.header__left p {
+    margin-bottom: 1.3rem;   
+}
+
+/* ==================CATEGORIES=============== */
+
+.categories__right {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.7rem;
+}
+
+.category {
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.category_icon {
+    margin-top: 4px;
+    display: inline-block;
+}
+
+/* =================POPULAR COURSES=============== */
+.courses__container {
+    grid-template-columns: 1fr;
+
+}
+
+
+/* =================POPULAR COURSES=============== */
+
+
+.testimonial__body {
+    padding: 1.2rem;
+}
+
+/* =================POPULAR COURSES=============== */
+
+.footer__container {
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+.footer__1 p {
+    margin: 1rem auto;
+}
+
+.footer__socials {
+    justify-content: center;
+
+}
+
+
+
+
 
 }
