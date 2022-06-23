@@ -101,7 +101,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: -100%;
+    right: -100%; /*"-" means its will transite from left side.*/
     display: flex;
     flex-direction: column;
     background: var(--color-primary);
